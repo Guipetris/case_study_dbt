@@ -1,0 +1,23 @@
+version: 2
+
+seeds:
+  - name: orders
+    description: "Order entries for office supplies"
+    docs:
+      show: true
+
+    columns:
+      - name: "order_id"
+        description: "ID for each order - a row in this table can have the same Order ID but it's a different product"
+        tests:
+          - not_null
+
+  - name: people
+    description: "Sales Staff and their region"
+    docs:
+      show: true
+      
+  - name: returns
+    description: "Returned orders"
+    docs:
+      show: true          
